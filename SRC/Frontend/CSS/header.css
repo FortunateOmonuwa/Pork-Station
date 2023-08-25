@@ -89,7 +89,7 @@ body .section-one .header-container .header-navigation .navigation-content {
   display: flex;
   padding-block-start: 1em;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   width: 100%;
 }
 body .section-one .header-container .header-navigation .navigation-content .nav-display-button {
