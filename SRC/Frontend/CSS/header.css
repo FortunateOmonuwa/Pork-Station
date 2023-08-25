@@ -3,12 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  outline: none;
 }
 
 :root {
-  --color-1: rgb(5, 5, 5);
+  --color-1: rgba(138, 132, 132, 0);
   --color-2: hsla(44, 100%, 49%, 1);
-  --color-3: rgb(209, 9, 9);
+  --color-3: rgb(90, 8, 8);
+  --color-red: rgb(123, 4, 4);
   --color-3-lighter: rgb(217, 88, 88);
   --color-4: rgb(178, 164, 108);
   --color-5: rgb(79, 64, 24);
@@ -22,14 +24,171 @@
   --dodis-ff: "Dosis", sans-serif;
   --playfair-ff: "Playfair Display", serif;
   --Roboto-mono-ff: "Roboto Mono", monospace;
-  --banner: 90deg, hsl(220, 17%, 7%) 0%, hsla(220, 17%, 7%, 0.5) 100%;
+  --banner: 90deg, hsl(240, 6%, 6%) 0%, hsla(220, 11%, 31%, 0.5) 100%;
   --radius-4: 4px;
   --radius-8: 8px;
   --radius-16: 16px;
   --radius-24: 24px;
   --radius-36: 36px;
+  --shadow-1: 0 1px 10px hsla(0, 0%, 0%, 0.973);
   --transition-2s: all 0.2 ease;
   --transition-5s: all 0.5s ease;
-  --transition-1s: all 0.1s ease-in-out;
-  --transition-2s: all 0.8s ease-in-out;
+  --transition-4s: all 0.4s ease-in-out;
+  --transition-8s: all 0.8s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html :focus-visible {
+  outline-color: var(--off-white-variant-2);
+}
+html ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: var(--color-1);
+  border-radius: var(--radius-8);
+}
+html a {
+  text-decoration: none;
+  color: var(--color-1);
+}
+
+body {
+  font-family: var();
+  transition: var(--transition-5s);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+body .section-one {
+  background-color: var(--color-1);
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/spicyfullchicken.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .section-one .header-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-inline: 1em;
+  padding-block: 2.5em;
+}
+body .section-one .header-container .header-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  width: 100%;
+}
+body .section-one .header-container .header-navigation .navigation-content {
+  display: flex;
+  padding-block-start: 1em;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+}
+body .section-one .header-container .header-navigation .navigation-content .nav-display-button {
+  display: none;
+}
+body .section-one .home-text-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 3em;
+}
+body .section-one .home-text-container .home-text {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2em;
+  width: min(70%, 15em);
+  font-family: var(--Roboto-mono-ff);
+  font-size: 2em;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: var(--shadow-1);
+}
+
+.navigation-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-logo .pork {
+  font-family: var(--playfair-ff);
+  font-size: 2.7em;
+  font-weight: 500;
+  color: var(--color-red);
+  text-shadow: var(--shadow-1);
+}
+@media screen and (min-width: 180px) and (max-width: 380px) {
+  .navigation-logo .pork {
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .navigation-logo .pork {
+    font-size: 2.3em;
+  }
+}
+.navigation-logo .station {
+  font-family: var(--dodis-ff);
+  font-weight: 900;
+}
+
+.navigation-content .item {
+  height: 2.7em;
+  width: 5em;
+}
+.navigation-content .item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  transition: var(--transition-8s);
+  opacity: 0.7;
+}
+.navigation-content .item:hover {
+  background-color: var(--color-3);
+  border-radius: var(--radius-8);
+  transition: var(--transition-4s);
+  opacity: 2;
+}
+
+.button-container {
+  display: flex;
+  margin-block-start: 2.5em;
+  justify-content: center;
+  align-items: center;
+}
+.button-container .button {
+  border: 2px solid var(--color-3);
+  color: var(--white);
+  height: 3em;
+  width: 15em;
+  border-radius: var(--radius-36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  font-weight: 700;
+  transition: var(--transition-5s);
+  box-shadow: var(--shadow-1);
+  position: relative;
+}
+.button-container .button:hover {
+  background-color: var(--color-3);
+  transform: translateX(0);
+  transition: var(--transition-8s);
+  color: var(--white);
 }/*# sourceMappingURL=header.css.map */

@@ -6,20 +6,8 @@
 }
 
 :root {
-    /* Colors */
-    --color-1: rgb(5, 5, 5);
-    --color-2: hsla(44, 100%, 49%, 1);
-    --color-3: rgb(209, 9, 9);
-    --color-3-lighter: rgb(217, 88, 88);
-    --color-4: rgb(178, 164, 108);
-    --color-5: rgb(79, 64, 24);
-    --off-white: hsla(0, 5%, 84%, 0.922);
-    --green: rgb(18, 62, 5);
-    --lighter-green:rgb(34, 88, 42);
-    --off-white-variant: hsla(250, 100%, 95%, 1);
-    --off-white-variant-2: rgb(113, 107, 137);
-    --white: rgb(255, 255, 255);
-    --black: rgba(0, 0, 0, 0);
+ 
+
 
 
     /* Font Families */
@@ -27,8 +15,6 @@
     --playfair-ff: "Playfair Display", serif;
     --Roboto-mono-ff: "Roboto Mono", monospace;
 
-    /* Gradients */
-    --banner: 90deg, hsl(220, 17%, 7%) 0%, hsla(220, 17%, 7%, 0.5) 100%;
 
     /* Border Radius */
     --radius-4: 4px;
@@ -45,5 +31,28 @@
     --transition-2s: all 0.2 ease;
     --transition-5s: all 0.5s ease;
     --transition-1s: all 0.1s ease-in-out;
-    --transition-2s: all 0.8s ease-in-out;
+    --transition-8s: all 0.8s ease-in-out;
+}
+html {
+       /* font-family: var(--ff-dm-sans);
+      font-size: 10px; */
+    scroll-behavior: smooth;
+
+    :focus-visible {
+        outline-color: var(--off-white-variant-2);
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--color-1);
+        border-radius: var(--radius-8);
+    }
+    a {
+        text-decoration: none;
+        color: var(--color-1);
+    }
 }
