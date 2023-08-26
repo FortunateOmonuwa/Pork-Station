@@ -41,10 +41,15 @@ addEvent(cancelContainer, "click", function () {
 //   }
 // });
 
+
+
 //Toggle for error message
 
 addEvent(sendIcon, "click", function () {
   if (!enquiryInputMessage) {
     errorMessage.classList.toggle("active");
+  }
+  else{
+    errorMessage.classList.remove("active");
   }
 });

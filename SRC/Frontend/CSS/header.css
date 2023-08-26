@@ -315,12 +315,13 @@ body .section-one .home-text-container .home-text {
   color: var(--color-3);
   background-color: var(--white);
   width: 70%;
-  height: 3em;
+  height: 1.5em;
   box-shadow: var(--shadow-1);
   border-radius: var(--radius-8);
   transition: var(--transition-8s);
   opacity: 0;
   padding: 12px;
+  font-size: 1em;
 }
 .message-container .main-enquiry .enquiry-section-1 .error-message.active {
   display: flex;
