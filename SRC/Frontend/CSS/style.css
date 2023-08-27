@@ -67,7 +67,7 @@ body .section-one {
   background-color: var(--color-1);
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
+  background-image: url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -115,6 +115,56 @@ body .section-one .home-text-container .home-text {
   font-weight: 800;
   text-align: center;
   text-shadow: var(--shadow-1);
+}
+body .signup-section {
+  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding-block: 2em;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+body .signup-section.active {
+  opacity: 0.5;
+}
+body .signup-section .signup-main {
+  width: 45%;
+  background-color: var(--color-2);
+  border-radius: var(--radius-16);
+  height: 100%;
+  padding-block: 2.5em;
+}
+body .signup-section .signup-main .signup-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+}
+body .signup-section .signup-main .signup-content .signup-header-text {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+body .signup-section .signup-main .signup-content .login-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.1em;
+}
+body .signup-section .signup-main .signup-content .login-text-container .login-text {
+  font-weight: 600;
+  font-size: 1em;
+  display: flex;
+}
+body .signup-section .signup-main .signup-content .login-text-container .login-main {
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
 .navigation-logo {
@@ -241,7 +291,7 @@ body .section-one .home-text-container .home-text {
   z-index: 3;
   width: 30%;
   height: 92vh;
-  border: 2px solid var(--color-red);
+  border: 1px solid var(--color-red);
   border-radius: var(--radius-16);
   padding-block-start: 1em;
   justify-content: center;
@@ -315,15 +365,8 @@ body .section-one .home-text-container .home-text {
   box-shadow: var(--shadow-1);
   border-radius: var(--radius-8);
   transition: var(--transition-8s);
-  opacity: 0;
   padding: 12px;
   font-size: 1em;
-}
-.message-container .main-enquiry .enquiry-section-1 .error-message.active {
-  display: flex;
-  transform: translateY(20%);
-  opacity: 1;
-  transition: var(--transition-8s);
 }
 .message-container .main-enquiry .entry-section-2 {
   position: relative;

@@ -6,7 +6,7 @@ const sendIcon = document.querySelector(".send-icon");
 const errorMessage = document.querySelector(".error-message");
 const enquiryInputMessage = document.querySelector(
   ".enquiry-input-message"
-).value;
+);
 
 
 
@@ -46,9 +46,12 @@ addEvent(cancelContainer, "click", function () {
 //Toggle for error message
 
 addEvent(sendIcon, "click", function () {
-  if (!enquiryInputMessage) {
-    errorMessage.classList.toggle("active");
-  } else {
-    errorMessage.classList.remove("active");
-  }
+
+    var userInput = enquiryInputMessage.value.trim();
+    errorMessage.style.display = "none";
+  if (!userInput) {
+    setTimeout(() => {
+        errorMessage.style.display = "flex";
+    }, 100);
+  } 
 });
