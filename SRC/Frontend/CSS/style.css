@@ -9,7 +9,7 @@
 :root {
   --color-1: rgba(138, 132, 132, 0);
   --color-2: hsla(44, 100%, 49%, 1);
-  --color-3: rgb(255, 0, 0);
+  --color-3: rgb(205, 12, 12);
   --color-red: rgb(123, 4, 4);
   --color-3-lighter: rgb(217, 88, 88);
   --color-4: rgb(178, 164, 108);
@@ -180,12 +180,8 @@ body .section-one .home-text-container .home-text {
   align-items: center;
   transform: var(--transition-8s);
 }
-.button-container:hover {
-  transform: translateY(8px);
-  transition: var(--transition-8s);
-}
 .button-container .button {
-  border: 2px solid var(--color-red);
+  border: 1px solid var(--color-red);
   color: var(--white);
   height: 3em;
   width: 15em;
@@ -201,9 +197,9 @@ body .section-one .home-text-container .home-text {
 }
 .button-container .button:hover {
   background-color: var(--color-red);
-  transform: translateX(0);
-  transition: var(--transition-8s);
   color: var(--white);
+  transform: translateY(8px);
+  transition: var(--transition-8s);
 }
 
 .enquiry-container {
@@ -380,4 +376,4 @@ body .section-one .home-text-container .home-text {
 }
 .message-container .main-enquiry .entry-section-2 .message-entry .send-icon i {
   font-size: 1.3em;
-}/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=style.css.map */

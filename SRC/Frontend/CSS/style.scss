@@ -10,7 +10,7 @@
     //Colors
     --color-1: rgba(138, 132, 132, 0);
     --color-2: hsla(44, 100%, 49%, 1);
-    --color-3: rgb(255, 0, 0);
+    --color-3: rgb(205, 12, 12);
     --color-red: rgb(123, 4, 4);
     --color-3-lighter: rgb(217, 88, 88);
     --color-4: rgb(178, 164, 108);
@@ -199,13 +199,9 @@ body {
     justify-content: center;
     align-items: center;
     transform: var(--transition-8s);
-    &:hover {
-        transform: translateY(8px);
-        transition: var(--transition-8s);
-    }
 
     .button {
-        border: 2px solid var(--color-red);
+        border: 1px solid var(--color-red);
         color: var(--white);
         height: 3em;
         width: 15em;
@@ -221,9 +217,9 @@ body {
 
         &:hover {
             background-color: var(--color-red);
-            transform: translateX(0);
-            transition: var(--transition-8s);
             color: var(--white);
+            transform: translateY(8px);
+            transition: var(--transition-8s);
         }
     }
 }
@@ -285,11 +281,11 @@ body {
         animation: smooth 0.5s ease-in;
 
         @keyframes smooth {
-            0%{
+            0% {
                 transform: translateX(100%);
             }
 
-            100%{
+            100% {
                 transform: translateX(0%);
             }
         }
@@ -399,11 +395,11 @@ body {
                         transition: var(--transition-5s);
                     }
                 }
-                .send-icon{
+                .send-icon {
                     position: absolute;
                     right: 3%;
-                    height: 2.0em;
-                    width: 2.0em;
+                    height: 2em;
+                    width: 2em;
                     border-radius: 50%;
                     background-color: var(--white);
                     display: flex;
@@ -411,12 +407,12 @@ body {
                     align-items: center;
                     transition: var(--transition-5s);
 
-                    &:hover{
+                    &:hover {
                         background-color: var(--off-white-variant-2);
                         color: var(--white);
                     }
 
-                    i{
+                    i {
                         font-size: 1.3em;
                     }
                 }

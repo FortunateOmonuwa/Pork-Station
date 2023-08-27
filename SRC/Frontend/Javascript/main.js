@@ -8,6 +8,8 @@ const enquiryInputMessage = document.querySelector(
   ".enquiry-input-message"
 ).value;
 
+
+
 //Function for adding events on elements that share the same class name.i.e an array.
 
 const addEvents = function (elements, eventType, callBack) {
@@ -41,15 +43,12 @@ addEvent(cancelContainer, "click", function () {
 //   }
 // });
 
-
-
 //Toggle for error message
 
 addEvent(sendIcon, "click", function () {
   if (!enquiryInputMessage) {
     errorMessage.classList.toggle("active");
-  }
-  else{
+  } else {
     errorMessage.classList.remove("active");
   }
 });
