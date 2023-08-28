@@ -12,7 +12,7 @@
   --color-3: rgb(205, 12, 12);
   --color-red: rgb(123, 4, 4);
   --color-3-lighter: rgb(217, 88, 88);
-  --color-4: rgb(178, 164, 108);
+  --color-4: rgb(200, 189, 146);
   --color-5: rgb(79, 64, 24);
   --off-white: hsla(0, 5%, 84%, 0.922);
   --green: rgb(18, 62, 5);
@@ -24,13 +24,13 @@
   --dodis-ff: "Dosis", sans-serif;
   --playfair-ff: "Playfair Display", serif;
   --Roboto-mono-ff: "Roboto Mono", monospace;
-  --banner: 90deg, hsl(0, 13%, 20%) 0%, hsla(0, 76%, 82%, 0.423) 100%;
+  --banner: 90deg, hsl(0, 17%, 16%) 0%, hsla(0, 76%, 82%, 0.423) 40%;
   --radius-4: 4px;
   --radius-8: 8px;
   --radius-16: 16px;
   --radius-24: 24px;
   --radius-36: 36px;
-  --shadow-1: 0 1px 10px hsla(0, 0%, 0%, 0.973);
+  --shadow-1: 0 1px 18px hsla(0, 0%, 0%, 0.973);
   --transition-2s: all 0.2 ease-in-out;
   --transition-5s: all 0.5s ease-in-out;
   --transition-4s: all 0.4s ease-in-out;
@@ -67,7 +67,7 @@ body .section-one {
   background-color: var(--color-1);
   height: 100vh;
   position: relative;
-  background-image: url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
+  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -125,7 +125,6 @@ body .signup-section {
   display: flex;
   justify-content: center;
   padding-block: 2em;
-  position: absolute;
   top: 0;
   width: 100vw;
 }
@@ -138,6 +137,7 @@ body .signup-section .signup-main {
   border-radius: var(--radius-16);
   height: 100%;
   padding-block: 2.5em;
+  z-index: 2;
 }
 body .signup-section .signup-main .signup-content {
   display: flex;
@@ -156,9 +156,10 @@ body .signup-section .signup-main .signup-content .login-text-container {
   justify-content: center;
   align-items: flex-end;
   gap: 0.1em;
+  padding-block-start: 1em;
 }
 body .signup-section .signup-main .signup-content .login-text-container .login-text {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1em;
   display: flex;
 }
