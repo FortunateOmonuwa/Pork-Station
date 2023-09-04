@@ -148,23 +148,24 @@ body {
     }
 
     .signup-section {
-        background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
+        background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/porkbanner1.jpg");
         background-repeat: no-repeat;
         height: 100vh;
-
         background-size: cover;
         background-position: center;
-        display: flex;
         justify-content: center;
         //padding-block: 1em;
-        //position: absolute;
+        position: absolute;
+        display: none;
         top: 0;
         width: 100vw;
-        // opacity: 0.5;
+        transition: var(--transition-8s);
+        opacity: 0;
 
         &.active {
-            opacity: 0.5;
             display: flex;
+            opacity: 1;
+            transition: var(--transition-8s);
         }
 
         .signup-main {
@@ -175,7 +176,6 @@ body {
             padding-block-start: 1.5em;
             z-index: 2;
             position: relative;
-            opacity: 1;
 
             .signup-content {
                 display: flex;
@@ -355,7 +355,7 @@ body {
 .navigation-content {
     .item {
         height: 2.7em;
-        width: 4.7em;
+        width: 6em;
         a {
             display: flex;
             justify-content: center;
@@ -370,6 +370,7 @@ body {
             border-radius: var(--radius-8);
             background-color: transparent;
             color: var(--white);
+            padding: 0.2em;
         }
         &:hover {
             background-color: var(--color-red);
@@ -603,6 +604,29 @@ body {
     width: 2em;
     height: 2em;
     border-radius: 50%;
+    cursor: pointer;
+
+    i {
+        font-size: 1.5em;
+    }
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+.close-icon-2 {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-4s);
+    border-radius: 50%;
+    background-color: var(--off-white-variant);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer;
 
     i {
         font-size: 1.5em;

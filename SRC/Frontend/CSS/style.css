@@ -121,19 +121,23 @@ body .section-one .home-text-container .home-text {
   text-shadow: var(--shadow-1);
 }
 body .signup-section {
-  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
+  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/porkbanner1.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
   background-position: center;
-  display: flex;
   justify-content: center;
+  position: absolute;
+  display: none;
   top: 0;
   width: 100vw;
+  transition: var(--transition-8s);
+  opacity: 0;
 }
 body .signup-section.active {
-  opacity: 0.5;
   display: flex;
+  opacity: 1;
+  transition: var(--transition-8s);
 }
 body .signup-section .signup-main {
   width: max(48%, 28em);
@@ -143,7 +147,6 @@ body .signup-section .signup-main {
   padding-block-start: 1.5em;
   z-index: 2;
   position: relative;
-  opacity: 1;
 }
 body .signup-section .signup-main .signup-content {
   display: flex;
@@ -301,7 +304,7 @@ body .signup-section .signup-main .signup-content .input-background .signup-btn 
 
 .navigation-content .item {
   height: 2.7em;
-  width: 4.7em;
+  width: 6em;
 }
 .navigation-content .item a {
   display: flex;
@@ -317,6 +320,7 @@ body .signup-section .signup-main .signup-content .input-background .signup-btn 
   border-radius: var(--radius-8);
   background-color: transparent;
   color: var(--white);
+  padding: 0.2em;
 }
 .navigation-content .item:hover {
   background-color: var(--color-red);
@@ -527,10 +531,32 @@ body .signup-section .signup-main .signup-content .input-background .signup-btn 
   width: 2em;
   height: 2em;
   border-radius: 50%;
+  cursor: pointer;
 }
 .close-icon i {
   font-size: 1.5em;
 }
 .close-icon:hover {
+  transform: scale(1.15);
+}
+
+.close-icon-2 {
+  position: absolute;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-4s);
+  border-radius: 50%;
+  background-color: var(--off-white-variant);
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-icon-2 i {
+  font-size: 1.5em;
+}
+.close-icon-2:hover {
   transform: scale(1.15);
 }/*# sourceMappingURL=style.css.map */
