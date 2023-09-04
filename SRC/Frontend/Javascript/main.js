@@ -4,13 +4,9 @@ const messageContainer = document.querySelector(".message-container");
 const cancelContainer = document.querySelector(".close-icon");
 const sendIcon = document.querySelector(".send-icon");
 const errorMessage = document.querySelector(".error-message");
-const enquiryInputMessage = document.querySelector(
-  ".enquiry-input-message"
-);
+const enquiryInputMessage = document.querySelector(".enquiry-input-message");
 const navItems = document.querySelectorAll(".item");
 const navigationContent = document.querySelector(".navigation-content");
-
-
 
 //Function for adding events on elements that share the same class name.i.e an array.
 
@@ -48,17 +44,22 @@ addEvent(cancelContainer, "click", function () {
 //Toggle for error message
 
 addEvent(sendIcon, "click", function () {
-
-    var userInput = enquiryInputMessage.value.trim();
-    errorMessage.style.display = "none";
+  var userInput = enquiryInputMessage.value.trim();
+  errorMessage.style.display = "none";
   if (!userInput) {
     setTimeout(() => {
-        errorMessage.style.display = "flex";
+      errorMessage.style.display = "flex";
     }, 100);
-  } 
+  }
 });
-
 
 //Navigation item
 
+navigationContent.addEventListener("click", (e) => {
+  let clickedItem = e.target;
+  if (clickedItem) {
+    navItems.forEach((item) => item.classList.remove("activeItem"));
+  }
 
+  
+});

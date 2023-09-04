@@ -24,7 +24,8 @@
   --dodis-ff: "Dosis", sans-serif;
   --playfair-ff: "Playfair Display", serif;
   --Roboto-mono-ff: "Roboto Mono", monospace;
-  --banner: 90deg, hsl(0, 0%, 0%) 0%, hsla(0, 48%, 84%, 0.423) 40%;
+  --banner: 60deg, hsl(0, 0%, 0%) 0%, hsla(0, 48%, 84%, 0.423) 40%;
+  --banner2: var(--color-1) 10%;
   --radius-4: 4px;
   --radius-8: 8px;
   --radius-16: 16px;
@@ -102,6 +103,8 @@ body .section-one .home-text-container {
   justify-content: center;
   align-items: center;
   padding-inline-start: 3em;
+  position: absolute;
+  top: 25%;
 }
 body .section-one .home-text-container .home-text {
   color: var(--white);
@@ -313,15 +316,17 @@ body .signup-section .signup-main .signup-content .input-background .signup-btn 
   opacity: 1;
   border-radius: var(--radius-8);
   background-color: transparent;
+  color: var(--white);
 }
 .navigation-content .item:hover {
-  background-color: var(--white);
+  background-color: var(--color-red);
   border-radius: var(--radius-4);
   transition: var(--transition-4s);
   opacity: 2;
 }
-.navigation-content .item.active a {
-  background-color: var(--white);
+.navigation-content .item.activeItem {
+  background-color: var(--color-red);
+  color: var(--white) !important;
   border-radius: var(--radius-8);
   opacity: 1;
 }
@@ -332,6 +337,10 @@ body .signup-section .signup-main .signup-content .input-background .signup-btn 
   justify-content: center;
   align-items: center;
   transform: var(--transition-8s);
+  position: absolute;
+  bottom: 20%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 .button-container .button {
   border: 1px solid var(--color-red);
