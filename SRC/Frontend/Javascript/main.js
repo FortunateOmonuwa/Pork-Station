@@ -83,6 +83,7 @@ addEvent(customerButton, "click", (e) => {
 addEvent(cancelSignup, "click", (e) => {
    
   signup.classList.remove("active");
+  navItems.forEach((item) => (item.style.display = "flex"));
   
 });
 
