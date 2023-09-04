@@ -8,7 +8,7 @@
 
 :root {
   --color-1: rgba(138, 132, 132, 0);
-  --color-2: hsla(44, 100%, 49%, 1);
+  --color-2: rgb(255, 201, 5);
   --color-3: rgb(205, 12, 12);
   --color-red: rgb(123, 4, 4);
   --color-3-lighter: rgb(217, 88, 88);
@@ -24,7 +24,7 @@
   --dodis-ff: "Dosis", sans-serif;
   --playfair-ff: "Playfair Display", serif;
   --Roboto-mono-ff: "Roboto Mono", monospace;
-  --banner: 90deg, hsl(0, 17%, 16%) 0%, hsla(0, 76%, 82%, 0.423) 40%;
+  --banner: 90deg, hsl(0, 0%, 0%) 0%, hsla(0, 48%, 84%, 0.423) 40%;
   --radius-4: 4px;
   --radius-8: 8px;
   --radius-16: 16px;
@@ -67,16 +67,16 @@ body .section-one {
   background-color: var(--color-1);
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/bbqpork2.jpg");
+  background-image: url("/SRC/Frontend/Images/Food-Images/porkbanner1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  width: 100vw;
 }
 body .section-one .header-container {
   display: flex;
   width: 100%;
   align-items: center;
-  padding-inline: 1em;
   padding-block: 2.5em;
 }
 body .section-one .header-container .header-navigation {
@@ -84,6 +84,7 @@ body .section-one .header-container .header-navigation {
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
   width: 100%;
+  position: absolute;
 }
 body .section-one .header-container .header-navigation .navigation-content {
   display: flex;
@@ -109,9 +110,9 @@ body .section-one .home-text-container .home-text {
   align-items: center;
   padding-block-start: 1.7em;
   padding-block-end: 1em;
-  width: min(70%, 15em);
+  width: min(60%, 10em);
   font-family: var(--Roboto-mono-ff);
-  font-size: 2.5em;
+  font-size: 2.8em;
   font-weight: 800;
   text-align: center;
   text-shadow: var(--shadow-1);
@@ -124,20 +125,22 @@ body .signup-section {
   background-position: center;
   display: flex;
   justify-content: center;
-  padding-block: 2em;
   top: 0;
   width: 100vw;
 }
 body .signup-section.active {
   opacity: 0.5;
+  display: flex;
 }
 body .signup-section .signup-main {
-  width: 45%;
-  background-color: var(--color-2);
+  width: max(48%, 28em);
+  background-color: var(--white);
   border-radius: var(--radius-16);
   height: 100%;
-  padding-block: 2.5em;
+  padding-block-start: 1.5em;
   z-index: 2;
+  position: relative;
+  opacity: 1;
 }
 body .signup-section .signup-main .signup-content {
   display: flex;
@@ -147,16 +150,17 @@ body .signup-section .signup-main .signup-content {
   height: 100%;
 }
 body .signup-section .signup-main .signup-content .signup-header-text {
-  color: white;
+  color: var(--black-color);
   text-align: center;
   font-size: 2em;
+  font-weight: 800;
 }
 body .signup-section .signup-main .signup-content .login-text-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 0.1em;
-  padding-block-start: 1em;
+  padding-block: 0.3em 1em;
 }
 body .signup-section .signup-main .signup-content .login-text-container .login-text {
   font-weight: 400;
@@ -165,7 +169,104 @@ body .signup-section .signup-main .signup-content .login-text-container .login-t
 }
 body .signup-section .signup-main .signup-content .login-text-container .login-main {
   font-weight: 600;
+  font-size: 1em;
+}
+body .signup-section .signup-main .signup-content .login-text-container .login-main a {
+  color: var(--color-3) !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+body .signup-section .signup-main .signup-content .input-background {
+  background-color: var(--white);
+  width: min(85%, 32em);
+  height: 80%;
+  border-radius: var(--radius-4);
+  padding-block: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .signup-section .signup-main .signup-content .input-background .user-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.3em;
+  background-color: var(--white);
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+  transition: var(--transition-8s);
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container:focus-within {
+  transition: var(--transition-8s);
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container:focus-within .input-icon {
+  display: none;
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container p {
+  font-size: 0.7em;
+  display: none;
+  align-self: self-start;
+  width: 100%;
+  color: var(--color-3);
+  font-weight: 600;
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container.password-container .input-icon {
+  width: 100%;
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container.password-container .input-icon .fa-eye {
+  position: absolute;
+  right: 2%;
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container input {
+  width: 100%;
+  height: 2.8em;
+  border: none;
+  border-bottom: 2px solid var(--off-white-variant);
+  padding: 1.5em 1.5em 1.5em 3.1em;
+  font-size: 0.9em;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  position: relative;
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container input::-moz-placeholder {
+  color: var(--off-white-variant-2);
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container input::placeholder {
+  color: var(--off-white-variant-2);
+}
+body .signup-section .signup-main .signup-content .input-background .user-input .input-container .input-icon {
+  position: absolute;
+  left: 1%;
+  bottom: 28%;
+  color: var(--off-white-variant-2);
   font-size: 1.2em;
+  font-weight: 200;
+  padding-inline-start: 0.1em;
+}
+body .signup-section .signup-main .signup-content .input-background .signup-btn {
+  background-color: var(--color-3);
+  width: max(50%, 10em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: min(1.8em, 28px);
+  padding: 2em;
+  margin-block: 2em;
+  border-radius: var(--radius-24);
+}
+body .signup-section .signup-main .signup-content .input-background .signup-btn .btn-main a {
+  color: var(--white) !important;
+  font-weight: 600;
 }
 
 .navigation-logo {
@@ -197,30 +298,31 @@ body .signup-section .signup-main .signup-content .login-text-container .login-m
 
 .navigation-content .item {
   height: 2.7em;
-  width: 5em;
+  width: 4.7em;
 }
 .navigation-content .item a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--white);
+  color: var(--color-3);
   font-weight: 800;
   font-size: 1em;
   width: 100%;
   height: 100%;
   transition: var(--transition-8s);
   opacity: 1;
+  border-radius: var(--radius-8);
+  background-color: transparent;
 }
 .navigation-content .item:hover {
-  background-color: var(--color-red);
-  border-radius: var(--radius-8);
+  background-color: var(--white);
+  border-radius: var(--radius-4);
   transition: var(--transition-4s);
   opacity: 2;
 }
 .navigation-content .item.active a {
-  background-color: var(--color-3);
+  background-color: var(--white);
   border-radius: var(--radius-8);
-  transition: var(--transition-4s);
   opacity: 1;
 }
 
@@ -242,6 +344,7 @@ body .signup-section .signup-main .signup-content .login-text-container .login-m
   align-items: center;
   gap: 1.5em;
   font-weight: 700;
+  font-size: 1.3em;
   transition: var(--transition-5s);
   box-shadow: var(--shadow-1);
   position: relative;
@@ -313,25 +416,6 @@ body .signup-section .signup-main .signup-content .login-text-container .login-m
   100% {
     transform: translateX(0%);
   }
-}
-.message-container .close-icon {
-  position: absolute;
-  right: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition-4s);
-  border-radius: 50%;
-  background-color: var(--off-white-variant);
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-}
-.message-container .close-icon i {
-  font-size: 1.5em;
-}
-.message-container .close-icon:hover {
-  transform: scale(1.15);
 }
 .message-container .main-enquiry {
   width: 100%;
@@ -420,4 +504,24 @@ body .signup-section .signup-main .signup-content .login-text-container .login-m
 }
 .message-container .main-enquiry .entry-section-2 .message-entry .send-icon i {
   font-size: 1.3em;
+}
+
+.close-icon {
+  position: absolute;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-4s);
+  border-radius: 50%;
+  background-color: var(--off-white-variant);
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+.close-icon i {
+  font-size: 1.5em;
+}
+.close-icon:hover {
+  transform: scale(1.15);
 }/*# sourceMappingURL=style.css.map */

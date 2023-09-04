@@ -7,6 +7,8 @@ const errorMessage = document.querySelector(".error-message");
 const enquiryInputMessage = document.querySelector(
   ".enquiry-input-message"
 );
+const navItems = document.querySelectorAll(".item");
+const navigationContent = document.querySelector(".navigation-content");
 
 
 
@@ -55,3 +57,8 @@ addEvent(sendIcon, "click", function () {
     }, 100);
   } 
 });
+
+
+//Navigation item
+
+

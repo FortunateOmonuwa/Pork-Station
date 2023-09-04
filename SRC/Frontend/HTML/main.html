@@ -36,6 +36,7 @@
   <body>
     <!-- Header -->
     <section class="section-one active">
+      <!-- <img src="/SRC/Frontend/Images/Food-Images/porkbanner2.png" alt=""> -->
       <div class="header-container">
         <!-- <div class="header-background"></div> -->
         <nav class="header-navigation">
@@ -47,16 +48,16 @@
             >
           </div>
           <div class="navigation-content">
-            <div class="nav-icon"></div>
-            <div class="about item"><a href="">About</a></div>
-            <div class="contact item"><a href="">Contact</a></div>
+
+            <div class="about item "><a href="">About</a></div>
+            <div class="contact item "><a href="">Contact</a></div>
             <div class="sign-in item"><a href="#">Sign-in</a></div>
             <div class="cart item">
               <a href="#">My Cart <i class="fa-solid fa-cart-shopping"></i></a>
             </div>
-            <div class="nav-display-button item">
+            <!-- <div class="nav-display-button item">
               <i class="fa-solid fa-cart-shopping"></i>
-            </div>
+            </div> -->
           </div>
         </nav>
       </div>
@@ -111,11 +112,14 @@
     <!-- Start of signup Section -->
     <section class="signup-section">
       <div class="signup-main">
+        <div class="close-icon">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
         <div class="signup-content">
           <h2 class="signup-header-text">Sign up to PorkStation</h2>
           <div class="login-text-container">
             <p class="login-text">Already have an account?</p>
-           <span class="login-main"><a href="">  sign in </a></span>
+            <span class="login-main"><a href=""> sign in </a></span>
           </div>
 
           <!-- <div class="social-media-container">
@@ -127,79 +131,84 @@
             </div>
           </div> -->
 
-          <div class="user-input">
-            <!-- First Name input -->
-            <div class="input-container">
-              <input
-                type="text"
-                placeholder="First Name"
-                required
-                id="firstName"
-              />
-              <p class="red-warning">First Name is required</p>
-              <span class="input-icon">
-                <i class="fa-solid fa-user"></i>
-              </span>
+          <div class="input-background">
+            <div class="user-input">
+              <!-- First Name input -->
+              <div class="input-container">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  required
+                  id="firstName"
+                />
+                <p class="red-warning">First Name is required</p>
+                <span class="input-icon">
+                  <i class="fa-solid fa-user"></i>
+                   <!-- <i class="fa-regular fa-user"></i> -->
+                </span>
+              </div>
+
+              <!-- Last Name input -->
+              <div class="input-container">
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  required
+                  id="lastName"
+                />
+                <p class="red-warning">Last Name is required</p>
+                <span class="input-icon">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+              </div>
+
+              <!-- Email Input -->
+              <div class="input-container">
+                <input type="email" placeholder="Email" required id="email" />
+                <p class="red-warning">Email is required</p>
+                <p class="email-invalid">Email is invalid</p>
+                <span class="input-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+              </div>
+
+              <!-- Password input -->
+              <div class="input-container password-container">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  required
+                  id="password"
+                />
+                <p class="warning">
+                  Password must contain at least 8 characters
+                </p>
+                <p class="red-warning">Password is too weak</p>
+                <p class="fair-warning">Strength: <span>Fair</span></p>
+                <p class="strong">Strength: <span>Strong</span></p>
+                <span class="input-icon">
+                  <i class="fa-solid fa-lock"></i>
+                  <i class="fa-solid fa-eye"></i>
+                </span>
+              </div>
+
+              <!-- Phone Number input -->
+              <div class="input-container">
+                <input
+                  type="number"
+                  placeholder="Phone Number"
+                  required
+                  id="phone"
+                />
+                <span class="input-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+              </div>
             </div>
 
-            <!-- Last Name input -->
-            <div class="input-container">
-              <input
-                type="text"
-                placeholder="Last Name"
-                required
-                id="lastName"
-              />
-              <p class="red-warning">Last Name is required</p>
-              <span class="input-icon">
-                <i class="fa-solid fa-user"></i>
-              </span>
+            <div class="signup-btn">
+              <div class="btn-main"><a href="#">Sign-up</a></div>
             </div>
-
-            <!-- Email Input -->
-            <div class="input-container">
-              <input type="email" placeholder="Email" required id="email" />
-              <p class="red-warning">Email is required</p>
-              <p class="email-invalid">Email is invalid</p>
-              <span class="input-icon">
-                <i class="fa-solid fa-envelope"></i>
-              </span>
-            </div>
-
-            <!-- Password input -->
-            <div class="input-container password-container">
-              <input
-                type="password"
-                placeholder="Password"
-                required
-                id="password"
-              />
-              <p class="warning">Password must contain at least 8 characters</p>
-              <p class="red-warning">Password is too weak</p>
-              <p class="fair-warning">Strength: <span>Fair</span></p>
-              <p class="strong">Strength: <span>Strong</span></p>
-              <span class="input-icon">
-                <i class="fa-solid fa-lock"></i>
-                <i class="fa-solid fa-eye"></i>
-              </span>
-            </div>
-
-            <!-- Phone Number input -->
-            <div class="input-container">
-              <input
-                type="number"
-                placeholder="Phone Number"
-                required
-                id="phone"
-              />
-              <span class="input-icon">
-                <i class="fa-solid fa-phone"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="sign-up-btn">
-            <div class="btn-main">Sign-up</div>
           </div>
         </div>
       </div>
