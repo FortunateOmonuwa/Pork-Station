@@ -373,11 +373,12 @@ body {
             padding: 0.2em;
         }
         &:hover {
-            background-color: var(--color-red);
+            //background-color: var(--color-red);
             //color: var(--white);
             border-radius: var(--radius-4);
             transition: var(--transition-4s);
             opacity: 2;
+            transform: translateY(-1px);
         }
 
         &.activeItem {
