@@ -68,7 +68,7 @@ body .section-one {
   background-color: var(--color-1);
   height: 100vh;
   position: relative;
-  background-image: url("/SRC/Frontend/Images/Food-Images/porkbanner1.png");
+  background-image: url("/Frontend/Images/Food-Images/porkbanner1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -104,14 +104,14 @@ body .section-one .home-text-container {
   align-items: center;
   padding-inline-start: 3em;
   position: absolute;
-  top: 25%;
+  top: 20%;
+  padding-block-start: 1.7em;
 }
 body .section-one .home-text-container .home-text {
   color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block-start: 1.7em;
   padding-block-end: 1em;
   width: min(60%, 10em);
   font-family: var(--Roboto-mono-ff);
@@ -121,7 +121,7 @@ body .section-one .home-text-container .home-text {
   text-shadow: var(--shadow-1);
 }
 body .signup-section {
-  background-image: linear-gradient(var(--banner)), url("/SRC/Frontend/Images/Food-Images/porkbanner1.jpg");
+  background-image: linear-gradient(var(--banner)), url("/Frontend/Images/Food-Images/porkbanner1.jpg");
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
@@ -342,7 +342,7 @@ body .signup-section .signup-main .signup-content .input-background .signup-btn 
   align-items: center;
   transform: var(--transition-8s);
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   transform: translate(-50%, -50%);
   left: 50%;
 }
@@ -559,4 +559,24 @@ body .signup-section .signup-main .signup-content .input-background .signup-btn 
 }
 .close-icon-2:hover {
   transform: scale(1.15);
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .button-container .button {
+    width: 10em;
+    height: 2em;
+  }
+  .button-container .button .button-text {
+    font-size: 0.7em;
+  }
+  .button-container .button .button-icon {
+    font-size: 1em;
+  }
+  .home-text-container {
+    top: 25% !important;
+    padding-block-start: 0em !important;
+  }
+  .home-text-container .home-text {
+    font-size: 2.4em !important;
+  }
 }/*# sourceMappingURL=style.css.map */

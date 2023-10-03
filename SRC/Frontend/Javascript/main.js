@@ -9,8 +9,7 @@ const navItems = document.querySelectorAll(".item");
 const navigationContent = document.querySelector(".navigation-content");
 const customerButton = document.querySelector(".button-container");
 const signup = document.querySelector(".signup-section");
-const cancelSignup = document.querySelector('.close-icon-2')
-
+const cancelSignup = document.querySelector(".close-icon-2");
 
 //Function for adding events on elements that share the same class name.i.e an array.
 
@@ -36,7 +35,6 @@ addEvent(enquiryContainer, "click", function () {
 addEvent(cancelContainer, "click", function () {
   messageContainer.classList.remove("active");
   enquiryContainer.style.display = "flex";
-
 });
 
 // addEvent(enquiryContainer, "click", function (e) {
@@ -58,8 +56,6 @@ addEvent(sendIcon, "click", function () {
   }
 });
 
-
-
 //Navigation item
 
 navigationContent.addEventListener("click", (e) => {
@@ -68,23 +64,19 @@ navigationContent.addEventListener("click", (e) => {
   if (clickedItem) {
     navItems.forEach((item) => item.classList.remove("activeItem"));
     e.target.parentElement.classList.add("activeItem");
-  } 
+  }
 });
-
 
 // Adding the "active" class to signup section
 addEvent(customerButton, "click", (e) => {
   signup.classList.add("active");
   enquiryContainer.style.display = "none";
-  navItems.forEach((item) => item.style.display = "none");
+  navItems.forEach((item) => (item.style.display = "none"));
 });
 
 // Removing the "active" class from the signup section
 addEvent(cancelSignup, "click", (e) => {
-   
   signup.classList.remove("active");
+  enquiryContainer.style.display = "flex";
   navItems.forEach((item) => (item.style.display = "flex"));
-  
 });
-
-
