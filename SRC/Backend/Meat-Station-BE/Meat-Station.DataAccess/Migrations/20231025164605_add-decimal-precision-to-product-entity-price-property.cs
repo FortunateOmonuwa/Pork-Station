@@ -5,7 +5,7 @@
 namespace Meat_Station.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class addforeignkeyattributetoUserRoles : Migration
+    public partial class adddecimalprecisiontoproductentitypriceproperty : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

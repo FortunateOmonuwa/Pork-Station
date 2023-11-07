@@ -32,10 +32,10 @@ namespace Meat_Station.Domain.Models
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; } = string.Empty;
+        public string Mail { get; set; } = string.Empty;
 
-        public byte[]? PasswordHash { get; set; }
-        public byte[]? PasswordSalt { get; set; }
+        public string PasswordHash { get; set; }
+        //public byte[]? PasswordSalt { get; set; }
 
         public string? RefreshToken { get; set; }
         public string? VerificationToken
@@ -80,7 +80,7 @@ namespace Meat_Station.Domain.Models
         public DateTime? TokenExpiration
         {
             get { return tokenExpiration; }
-            private set { tokenExpiration = value; }
+            set { tokenExpiration = value; }
         }
 
         public DateTime? CreatedAt { get; set; }
@@ -88,7 +88,6 @@ namespace Meat_Station.Domain.Models
         public List<Role> Role { get; set; }
 
         [ForeignKey(nameof(Location))]
-
         public int? LocationId { get; set; }
         public Location? Location { get; set; }
 

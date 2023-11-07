@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Meat-Station.Domain\Meat-Station.Domain.csproj" />
+    <ProjectReference Include="..\Meat-Station.Service\Meat-Station.Service.csproj" />
   </ItemGroup>
 
 </Project>

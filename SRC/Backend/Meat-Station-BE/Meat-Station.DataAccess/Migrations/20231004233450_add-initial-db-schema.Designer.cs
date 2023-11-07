@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Meat_Station.DataAccess.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231003192249_add-foreignkey-attribute-to-UserRoles")]
-    partial class addforeignkeyattributetoUserRoles
+    [Migration("20231004233450_add-initial-db-schema")]
+    partial class addinitialdbschema
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -133,7 +133,7 @@ namespace Meat_Station.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            RoleName = "Rider"
+                            RoleName = "Dispatch-Rider"
                         });
                 });
 
@@ -148,10 +148,6 @@ namespace Meat_Station.DataAccess.Migrations
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -163,18 +159,20 @@ namespace Meat_Station.DataAccess.Migrations
                     b.Property<int?>("LocationId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Mail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("PasswordHash")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordResetToken")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("PasswordSalt")
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Phone")
                         .IsRequired()

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Meat_Station.Domain.DTOs
+namespace Meat_Station.Domain.DTOs.CategoryDTO
 {
-    public class CustomerGetDTO
+    public class CategoryCreateDTO
     {
+        public string? CategoryName { get; set; }
     }
 }

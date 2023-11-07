@@ -1,5 +1,12 @@
 using Meat_Station.DataAccess.AppDataContext;
+using Meat_Station.DataAccess.Helpers;
+using Meat_Station.DataAccess.Interfaces;
+using Meat_Station.DataAccess.Repositories;
+using Meat_Station.Domain.Models;
+using Meat_Station.Service.AuthService.Interfaces;
+using Meat_Station.Service.AuthService.Repository;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +19,15 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("AppConnection"));
+});
+builder.Services.AddTransient<IAuthService, AuthService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.AddTransient<CategoryHelper>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
 });
 
 var app = builder.Build();

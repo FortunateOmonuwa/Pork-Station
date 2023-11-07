@@ -5,13 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Meat_Station.Domain.Models
+namespace Meat_Station.Domain.DTOs.ProductDTO
 {
-    public class Product
+    public class ProductCreateDTO
     {
-        [Key]
-        public int Id { get; set; }
-
         [Required, MaxLength(50)]
         public string Name { get; set; } = string.Empty;
 
@@ -26,12 +23,7 @@ namespace Meat_Station.Domain.Models
         public decimal Price { get; set; }
 
         [Required]
-        [Range(0, int.MaxValue)]
         public int Stock { get; set; }
-
-        public bool IsAvailable => Stock > 0;
-
-        public List<ProductCategories>? Categories { get; set; }
+        public List<string> CategoryName { get; set; }
     }
-
 }

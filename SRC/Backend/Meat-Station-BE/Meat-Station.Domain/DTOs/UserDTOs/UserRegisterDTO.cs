@@ -6,10 +6,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Meat_Station.Domain.DTOs.LocationDTO;
+using Meat_Station.Domain.DTOs.Roles;
 
-namespace Meat_Station.Domain.DTOs
+namespace Meat_Station.Domain.DTOs.UserDTOs
 {
-    public class UserCreateDTO
+    public class UserRegisterDTO
     {
         [Required]
         [DataType(DataType.Text)]
@@ -28,7 +30,9 @@ namespace Meat_Station.Domain.DTOs
 
         [Required]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; } = string.Empty;
+        public string Mail { get; set; } = string.Empty;
+        public bool IsAdmin { get; set; }
+        public bool IsDispatch {  get; set; }
         [Required, MinLength(8, ErrorMessage = "Password has to be at least 8 Characters")]
         [DataType(DataType.Password)]
         public string Password { get; set; } = string.Empty;
@@ -36,8 +40,7 @@ namespace Meat_Station.Domain.DTOs
         [Required]
         [Compare("Password", ErrorMessage = " Passwords do not match.")]
         public string ConfirmPassword { get; set; } = string.Empty;
-
-        public List<Role> Role { get; set; }
-        public Location? Location { get; set; }
+        //public List<RolesCreateDTO> Roles { get; set; }
+        public LocationCreateDTO? Location { get; set; }
     }
 }

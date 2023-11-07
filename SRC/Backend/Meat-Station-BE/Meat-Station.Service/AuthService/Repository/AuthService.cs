@@ -1,7 +1,9 @@
-﻿using Meat_Station.Service.AuthService.Interfaces;
+﻿using BCrypt.Net;
+using Meat_Station.Service.AuthService.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,17 +11,32 @@ namespace Meat_Station.Service.AuthService.Repository
 {
     public class AuthService : IAuthService
     {
-        public void CreatePasswordHash(string password, out byte[] password_hash, out byte[] password_salt)
+        public string CreatePasswordHash(string password)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if(string.IsNullOrWhiteSpace(password))
+                {
+                    throw new ArgumentNullException(password);
+                }
+                else
+                {
+                    string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
+                    return passwordHash;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"{ex.Message} \n{ex.Source} \n{ex.InnerException}");
+            }
         }
 
         public string CreateRandomVerificationToken()
         {
-            throw new NotImplementedException();
+            return Convert.ToHexString(RandomNumberGenerator.GetBytes(8));
         }
 
-        public string CreateToken(string Id, bool role)
+        public string CreateToken(string Id, string role)
         {
             throw new NotImplementedException();
         }
